@@ -1,0 +1,67 @@
+<div class="form">
+    <h2>Registrar Empleado</h2>
+
+    <form (ngSubmit)="formSubmit()">
+    <!-- Título -->
+        <h2>Información Personal</h2>
+
+        <!-- Tipo de Documento -->
+        <label for="tipoDocumento">Tipo de Documento:</label>
+        <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="newEmployee.dsDocumentType">
+            <option value="TI">TI</option>
+            <option value="CC">CC</option>
+        </select>
+
+        <!-- Número de Documento -->
+        <label for="numeroDocumento">Número de Documento:</label>
+        <input type="text" id="numeroDocumento" name="numeroDocumento" [(ngModel)]="newEmployee.nmDocument">
+
+        <!-- Nombre Completo -->
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="newEmployee.dsName">
+
+        <!-- Apellidos -->
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" [(ngModel)]="newEmployee.dsLastName">
+
+        <!-- Teléfono -->
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" [(ngModel)]="newEmployee.dsTelephone">
+
+        <!-- Dirección -->
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" [(ngModel)]="newEmployee.dsAddress">
+
+        <!-- Título -->
+        <h3>Información Laboral</h3>
+        
+        <!-- Fecha de Ingreso -->
+        <label for="fechaIngreso">Fecha de Ingreso:</label>
+        <input type="date" id="fechaIngreso" name="fechaIngreso" [(ngModel)]="newEmployee.feDateEntry">
+
+        <!-- Fecha de Retiro -->
+        <label for="fechaRetiro">Fecha de Retiro:</label>
+        <input type="date" id="fechaRetiro" name="fechaRetiro" [(ngModel)]="newEmployee.feDateDeparture">
+
+        <!-- Tipo de Contrato -->
+        <label for="tipoContrato">Tipo de Contrato:</label>
+        <select id="tipoContrato" name="tipoContrato" [(ngModel)]="newEmployee.dsTypeOfContract">
+            <option value="TerminoIndefinido">Término Indefinido</option>
+            <option value="TerminoFijo">Término Fijo</option>
+            <option value="PrestacionServicios">Prestación de Servicios</option>
+        </select>
+
+        <!-- Estado -->
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" [(ngModel)]="newEmployee.dsEmployeeStatus">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select>
+
+        <!-- Botón de Enviar -->
+        <button type="submit">Registrar</button>
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    </form>
+
+</div>
+

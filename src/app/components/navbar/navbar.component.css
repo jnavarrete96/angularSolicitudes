@@ -1,0 +1,16 @@
+.navbar {
+    height: 50px;
+  }
+  
+  .bg-purple {
+    background-color: rgba(128, 0, 128, 0.7) !important;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: white;
+  }
+  
